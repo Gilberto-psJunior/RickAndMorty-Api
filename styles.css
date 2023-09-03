@@ -5,6 +5,7 @@
 }
 @media (max-width: 600px) {
   .card {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     border-radius: 20px;
     /* Exibe os elementos em linha */
@@ -21,6 +22,10 @@
   }
   .card-info h3 {
     font-size: 15px;
+  }
+  header img{
+    height: 10vh;
+    width: 60vw;
   }
 }
 @media (min-width: 600px) {
@@ -42,10 +47,18 @@
   .card-info h3 {
     font-size: 1.8rem;
   }
+  .card-info p{
+font-size: 1.5rem;
+  }
+  header img{
+    height: 25vh;
+    width: 60vw;
+  }
 }
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #000000;
+  
 }
 
 .card {
@@ -53,14 +66,17 @@ body {
   background-color: #eee7e7;
 }
 header {
+  font-size: 34px;
   background-image: url(img/desktop-wallpaper-rick-and-morty-texture.jpg);
-  color: #f9f941;
-  text-shadow: #000000 2px 2px 4px;
+  color: #12d6dd;
+  text-shadow: #000000 5px 5px 4px;
   padding: 30px;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   font-weight: bolder;
+  border-radius: 10px;
 }
+
 
 main {
   padding: 10px;
@@ -120,10 +136,10 @@ footer {
 }
 
 .card:hover {
-  color: #000000;
+  color: #eef5f6;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  text-shadow: #f5f5f5 2px 2px 2px;
+  text-shadow: #000000 2px 2px 2px;
 
   font-weight: 500;
 
