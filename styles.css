@@ -37,15 +37,22 @@ main {
 
  /* Estilize o card */
 .card {
+
+  @media (max-width: 600px) {
+    .facet_sidebar {
+      display: flex;
+    }
+  }
   flex-direction: row;
- 
+ border-radius: 20px;
   
   
   display: flex; /* Exibe os elementos em linha */
-  border: 2px solid #ddd; /* Adicione uma borda ao card */
+  border: 2px solid #8f8888; /* Adicione uma borda ao card */
   padding: 10px; /* Adicione algum espaçamento interno */
   margin: 10px; /* Adicione margem ao redor do card */
-width: 50vh; /* Defina a largura máxima do card */
+width: 50vh;
+height: 40vh; /* Defina a largura máxima do card */
 
 }
 
@@ -54,24 +61,28 @@ width: 50vh; /* Defina a largura máxima do card */
   max-width: 50%; /* A imagem se ajustará automaticamente ao tamanho do contêiner pai */
   height: auto; /* A altura da imagem é ajustada automaticamente para manter a proporção */
 }
-.card h1{
+.card-info h1{
   font-weight: bolder;
+  font-size: 1.8rem;
 }
 /* Estilize as informações do card */
 .card-info {
-max-width: 50%;
-  padding: 0 20px; /* Adicione espaçamento interno às informações */
+  text-align: center;
+
+  padding: 1.8px; /* Adicione espaçamento interno às informações */
 }
 
 /* Estilize o título do card */
 .card-info h2 {
-  font-size: 18px; /* Defina o tamanho da fonte do título */
+ 
+  font-size: 1rem; /* Defina o tamanho da fonte do título */
   margin-top: 0; /* Remova a margem superior padrão */
 }
 
 /* Estilize o texto de descrição do card */
 .card-info p {
-  font-size: 19px; /* Defina o tamanho da fonte do texto de descrição */
+  font-size: 1rem; /* Defina o tamanho da fonte do texto de descrição */
+  font-weight: bold;
   margin-bottom: 0; /* Remova a margem inferior padrão */
 }
 
@@ -99,8 +110,8 @@ footer{
   color: #fff;
     font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 800;
+  
+  font-weight: 500;
   
 
   width: 50vh;
