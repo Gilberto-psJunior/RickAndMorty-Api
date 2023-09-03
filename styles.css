@@ -65,7 +65,7 @@ width: 100%;
 
 /* Estilize o texto de descrição do card */
 .card-info p {
-  font-size: 14px; /* Defina o tamanho da fonte do texto de descrição */
+  font-size: 19px; /* Defina o tamanho da fonte do texto de descrição */
   margin-bottom: 0; /* Remova a margem inferior padrão */
 }
 
@@ -77,3 +77,12 @@ footer{
   justify-content: center;
 }
 
+.remimg{
+  
+  align-items: center;
+  display: flex;
+}
+.remimg img{
+  max-width: 50vh;
+  max-height: 50vh;
+}
