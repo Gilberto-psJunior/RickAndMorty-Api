@@ -12,18 +12,24 @@ async function fetchUsers() {
 
     users.forEach(user => {
       const userCard = document.createElement('div')
-      userCard.classList.add('user-card')
+      userCard.classList.add('card')
+      const cardInfo = document.createElement('div')
+      cardInfo.classList.add('card-info')
 
       userCard.innerHTML = `
         <img src="${user.image}" alt="">
-        <h2>Name: ${user.name}</h2>
-        <h3>Status: ${user.status}</h3>
-        <h3>Status: ${user.species}</h3>
-        <h4>Visto ultima vez em:</h4>
-        <p>${user.location.name}</p>
-        
+       
+       
+      `
+      cardInfo.innerHTML= `
+      <h2>Name: ${user.name}</h2>
+      <h3>Status: ${user.status}</h3>
+      <h3>Status: ${user.species}</h3>
+      <h4>Visto ultima vez em:</h4>
+      <p>${user.location.name}</p>
       `
       userContainer.appendChild(userCard)
+      userCard.appendChild(cardInfo)
     })
 
   } catch (error) {
