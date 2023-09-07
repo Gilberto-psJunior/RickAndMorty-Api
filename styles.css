@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-@media (max-width: 600px) {
+@media (max-width:800px) {
   .card {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -13,7 +13,7 @@
     padding: 10px; /* Adicione algum espaçamento interno */
     margin: 10px; /* Adicione margem ao redor do card */
 
-    max-width: 80vw;
+    width: 80vw;
     max-height: 25vh;
     /* Defina a largura máxima do card */
   }
@@ -28,32 +28,28 @@
     width: 60vw;
   }
 }
-@media (min-width: 600px) {
+@media (min-width:800px) {
   .card {
-   
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     border-radius: 20px;
     /* Exibe os elementos em linha */
-    border: 5px solid transparent; /* Adicione uma borda ao card */
+    border: 2px solid #8f8888; /* Adicione uma borda ao card */
     padding: 10px; /* Adicione algum espaçamento interno */
     margin: 10px; /* Adicione margem ao redor do card */
 
-    width: 45vw;
-    min-height: 28vh;
+    width: 40vw;
+    max-height: 25vh;
     /* Defina a largura máxima do card */
   }
   .card-info h1 {
-    font-size: 3rem;
+    font-size: 20px;
   }
   .card-info h3 {
-    font-size: 1.8rem;
-  }
-  .card-info p{
-font-size: 1.5rem;
+    font-size: 15px;
   }
   header img{
-    height: 25vh;
+    height: 10vh;
     width: 60vw;
   }
 }
@@ -79,7 +75,20 @@ header {
   border-radius: 10px;
 }
 
+.pageN{
+  position:  fixed;
+  bottom: 37%;
+  right: 02%;
+  opacity: 90%;
+  width: 10vw;
+}
 
+.pageN:hover{
+  border-color: #12d6dd;
+  cursor: pointer;
+  background-image: url("img/desktop-wallpaper-rick-and-morty-texture.jpg");
+  border-radius: 95%;
+}
 main {
   padding: 10px;
   display: flex;
@@ -125,16 +134,18 @@ main {
 footer {
   display: flex;
   justify-content: center;
+  max-height: 600px;
   background-image: url(img/HD-wallpaper-black-stars-black-aesthetic.jpg);
 }
 
 .remimg {
   align-items: center;
   display: flex;
+  
 }
 .remimg img {
-  max-width: 50vh;
-  max-height: 50vh;
+  max-width: 100vh;
+  max-height: 30vh;
 }
 
 .card:hover {
