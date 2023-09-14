@@ -3,9 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .card {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
     display: flex;
     border-radius: 20px;
     /* Exibe os elementos em linha */
@@ -23,40 +24,41 @@
   .card-info h3 {
     font-size: 15px;
   }
-  header img{
+  header img {
     height: 08vh;
     width: 50vw;
   }
-   
-.pageN{
-  position:  fixed;
-  bottom: 40%;
-  right: 0%;
-  opacity: 95%;
-  width: 20%;
+
+  .pageN {
+    position: fixed;
+    bottom: 40%;
+    right: 0%;
+    opacity: 95%;
+    width: 20%;
+  }
+  .pageP {
+    position: fixed;
+    bottom: 40%;
+    left: 00%;
+    opacity: 95%;
+    width: 20%;
+    transform: scaleX(-1);
+  }
+  .card img {
+    min-width: 10vw;
+    min-height: 20vh;
+    /* A imagem se ajustará automaticamente ao tamanho do contêiner pai */
+    height: auto; /* A altura da imagem é ajustada automaticamente para manter a proporção */
+    border-radius: 10px;
+  }
+  .filter {
+    width: 90vw;
+  }
 }
-.pageP{
-  position:  fixed;
-  bottom: 40%;
- left: 00%;
-  opacity: 95%;
-  width: 20%;
- transform: scaleX(-1);
-}
-.card img {
-  min-width: 10vw;
-  min-height: 20vh;
-  /* A imagem se ajustará automaticamente ao tamanho do contêiner pai */
-  height: auto; /* A altura da imagem é ajustada automaticamente para manter a proporção */
-  border-radius: 10px;
-}
-.filter{
-  width: 90vw;
-}
-}
-@media (min-width:800px) {
+@media (min-width: 800px) {
   .card {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
     display: flex;
     border-radius: 20px;
     /* Exibe os elementos em linha */
@@ -70,117 +72,107 @@
   }
   .card-info h1 {
     font-size: 30px;
-    
   }
   .card-info h3 {
-    font-size:18px;
+    font-size: 18px;
   }
-  
-  header img{
+
+  header img {
     height: 10vh;
     width: 60vw;
   }
-  header img{
+  header img {
     height: 15vh;
     width: 40%;
   }
-.pageN{
-  position:  fixed;
-  bottom: 37%;
-  right: 02%;
-  opacity: 95%;
-  width: 10%;
-}
-.pageP{
-  position:  fixed;
-  bottom: 37%;
- left: 02%;
-  opacity: 95%;
-  width: 10%;
- transform: scaleX(-1);
-}
-.card img {
-  min-width: 5vw;
-  min-height: 10vh;
-  /* A imagem se ajustará automaticamente ao tamanho do contêiner pai */
-  height: auto; /* A altura da imagem é ajustada automaticamente para manter a proporção */
-  border-radius: 10px;
-}
-.filter{
-  
- 
-  width: 35vw;
-}
+  .pageN {
+    position: fixed;
+    bottom: 37%;
+    right: 02%;
+    opacity: 95%;
+    width: 10%;
+  }
+  .pageP {
+    position: fixed;
+    bottom: 37%;
+    left: 02%;
+    opacity: 95%;
+    width: 10%;
+    transform: scaleX(-1);
+  }
+  .card img {
+    min-width: 5vw;
+    min-height: 10vh;
+    /* A imagem se ajustará automaticamente ao tamanho do contêiner pai */
+    height: auto; /* A altura da imagem é ajustada automaticamente para manter a proporção */
+    border-radius: 10px;
+  }
+  .filter {
+    width: 35vw;
+  }
 }
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: #000000;
-
-  
 }
-input{
+input {
   color: #39ff14;
   font-weight: bold;
   font-size: large;
 }
 .statusColor {
-  display:  inline-block;
-	height: 12px;
+  display: inline-block;
+  height: 12px;
   width: 12px;
-	border-radius: 50%;
-	box-shadow: #000000 1px 1px 5px;
+  border-radius: 50%;
+  box-shadow: #000000 1px 1px 5px;
   margin: none;
-  
- 
-  
 }
 
 .dead {
-	background-color: red;
+  background-color: red;
 }
 
 .alive {
-	background-color: rgb(7, 247, 7);
+  background-color: rgb(7, 247, 7);
 }
 
 .unknown {
-	background-color: lightgray;
+  background-color: lightgray;
 }
 .card {
   margin-top: 50px;
   background-color: #eee7e7;
-  
+
   min-width: 40vw;
   min-height: 30vh;
- 
 }
-header{
+header {
   margin-bottom: 0;
 }
-::placeholder{
+::placeholder {
   color: rgb(29, 227, 11);
-  text-shadow: #eef5f6 1px 1px  5px;
+  text-shadow: #eef5f6 1px 1px 5px;
   font-weight: bolder;
-  
 }
-.filter{
+.filter {
   margin-top: 20px;
- 
-  
+
   height: 03 vh;
   display: grid;
   grid-template-columns: repeat(4, 240px);
   gap: 20px;
   padding: 10px 20px;
   background-image: url(img/b0b1f5d33de00e3c21ad29bbba25e31b.gif);
-  
+
   border: 1px solid #2196f3;
   border-radius: 60px;
   box-shadow: #b9f2c3 8px 8px 8px;
 }
 
-.filter img{
+.filter img {
   opacity: 50%;
 }
 
@@ -196,36 +188,31 @@ header {
   border-radius: 10px;
 }
 
-
-.pageN:hover{
- 
+.pageN:hover {
   cursor: pointer;
   background-image: url("img/texture.jpg");
   border-radius: 95%;
 }
 
-.pageP:hover{
-  
+.pageP:hover {
   cursor: pointer;
   background-image: url("img/texture.jpg");
   border-radius: 95%;
 }
-
 
 main {
   padding: 10px;
   display: flex;
   justify-content: center;
-  max-width:100vw;
-  
+  max-width: 100vw;
+
   flex-wrap: wrap;
   background-image: url(img/HD-wallpaper-black-stars-black-aesthetic.jpg);
 }
 
-#spanStatus{
+#spanStatus {
   font-weight: bold;
-  font-size: larger;
-  
+  font-size: large;
 }
 .user-list {
   justify-content: center;
@@ -237,7 +224,6 @@ main {
 /* Estilize o card */
 
 /* Estilize a imagem */
-
 
 /* Estilize as informações do card */
 .card-info {
@@ -264,17 +250,16 @@ footer {
 .remimg {
   align-items: center;
   display: flex;
-  
 }
 .remimg img {
   max-width: 50vw;
   max-height: 50vh;
 }
 
-#foots{
+#foots {
   text-align: center;
 }
-#foots a{
+#foots a {
   color: #39ff14;
 }
 
@@ -296,7 +281,7 @@ footer {
   text-shadow: #000000 2px 2px 2px;
 
   font-weight: 500;
-border: #000000 3px 3px 3px;
+  border: #000000 3px 3px 3px;
   scale: 1.1;
   background: url(img/desktop-wallpaper-rick-and-morty-texture.jpg);
 }
