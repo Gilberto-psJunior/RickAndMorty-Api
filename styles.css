@@ -129,11 +129,23 @@ input{
 	height: 12px;
   width: 12px;
 	border-radius: 50%;
-	border: none;
+	box-shadow: #000000 1px 1px 5px;
   margin: none;
   
  
-  background-color: #39ff14;
+  
+}
+
+.dead {
+	background-color: red;
+}
+
+.alive {
+	background-color: rgb(7, 247, 7);
+}
+
+.unknown {
+	background-color: lightgray;
 }
 .card {
   margin-top: 50px;
@@ -210,6 +222,11 @@ main {
   background-image: url(img/HD-wallpaper-black-stars-black-aesthetic.jpg);
 }
 
+#spanStatus{
+  font-weight: bold;
+  font-size: larger;
+  
+}
 .user-list {
   justify-content: center;
   display: flex;

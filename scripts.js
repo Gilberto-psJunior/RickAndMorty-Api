@@ -56,9 +56,20 @@ const renderUsers = async (page) => {
       <h1> ${user.name}</h1>
       <br>
       
-      <h3>Status:  ${user.status}  <p class="statusColor" ></p> </h3>
+      <h3>Species: ${user.species} </h3>
       
-      <h3>Species: ${user.species}</h3>
+      <div id='status'>
+      <span id="spanStatus" >Status: ${user.status}</span>
+          <div class='statusColor ${
+           user.status == 'Dead'
+              ? 'dead'
+              : user.status == 'Alive'
+              ? 'alive'
+              : 'unknown'
+          }'>
+          </div>
+          
+      </div>
       
       <h3> Last known location:</h3>
       <p>${user.location.name}</p>
