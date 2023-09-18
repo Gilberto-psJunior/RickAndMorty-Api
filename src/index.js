@@ -74,14 +74,14 @@ next.addEventListener("click", () => {
   if (currentpage < 42) {
     userContainer.innerHTML = "";
     currentpage += 1;
-    fetchRender(currentpage);
+    fetchRender(currentpage,searchCharacter.value);
   }
 });
 prev.addEventListener("click", () => {
   if (currentpage > 1) {
     userContainer.innerHTML = "";
     currentpage -= 1;
-    fetchRender(currentpage);
+    fetchRender(currentpage,searchCharacter.value);
   }
 });
 

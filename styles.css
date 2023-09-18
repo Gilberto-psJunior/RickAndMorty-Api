@@ -1,3 +1,6 @@
+
+
+
 * {
   padding: 0;
   margin: 0;
@@ -24,7 +27,7 @@
   .card-info h3 {
     font-size: 15px;
   }
-  header img {
+  .rickmorty{
     height: 08vh;
     width: 50vw;
   }
@@ -288,3 +291,22 @@ footer {
 .main {
   width: 60px;
 }
+.pickle img{
+  max-width: 80px;
+max-height: 50px;
+margin-bottom: 0px;
+
+}
+.pickle{
+  margin-top: 20px;
+  margin-bottom: 0px;
+ display: flex;
+ text-decoration: none;
+ font-size: 2rem;
+ color: #f2f4f5;
+  }
+  .pickle :hover{
+    scale: 1.1;
+
+  }
+
