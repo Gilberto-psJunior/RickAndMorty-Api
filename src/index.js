@@ -5,18 +5,16 @@ const prev = document.querySelector(".pageP");
 let currentpage = 1;
 const totalPages = 42;
 let episodeChar = 0;
-let searchCharacter=document.querySelector("#name");
+let searchCharacter = document.querySelector("#name");
 
-
-
-async function fetchRender(page,name="") {
+async function fetchRender(page, name = "") {
   try {
     const params = { page, name };
     const response = await api.get(`/character`, { params });
 
     const users = response.data.results;
     const infos = response.data.info;
-   
+
     users.forEach((user) => {
       const userCard = document.createElement("div");
       userCard.classList.add("card");
@@ -61,40 +59,30 @@ async function fetchRender(page,name="") {
       userContainer.appendChild(userCard);
       userCard.appendChild(cardInfo);
     });
-    console.log(currentpage)
-   
-    
-    
+    console.log(currentpage);
   } catch (error) {
     console.log(error, "render characters error");
   }
 }
 
-searchCharacter.addEventListener("input",(event) => {
-  
- 
+searchCharacter.addEventListener("input", (event) => {
+  fetchRender(currentpage, searchCharacter.value);
+  userContainer.innerHTML = "";
+});
 
-  fetchRender(currentpage,searchCharacter.value)
-  userContainer.innerHTML=""
-})
- 
- 
-    next.addEventListener("click",()=>{
-        if (currentpage<42) {
-            userContainer.innerHTML=""
-            currentpage+=1;
-            fetchRender(currentpage)  
-        }
-        
-    })
-    prev.addEventListener("click",()=>{
-        if (currentpage>1) {
-            userContainer.innerHTML=""
-            currentpage-=1;
-            fetchRender(currentpage)  
-        }
-    })
+next.addEventListener("click", () => {
+  if (currentpage < 42) {
+    userContainer.innerHTML = "";
+    currentpage += 1;
+    fetchRender(currentpage);
+  }
+});
+prev.addEventListener("click", () => {
+  if (currentpage > 1) {
+    userContainer.innerHTML = "";
+    currentpage -= 1;
+    fetchRender(currentpage);
+  }
+});
 
-   
-
-fetchRender()
+fetchRender();
