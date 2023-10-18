@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rick and Morty</title>
   <link rel="icon" href="img/Novo Projeto.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <link rel="stylesheet" href="styles.css">
 
@@ -15,34 +17,76 @@
 
   <header>
 
-    <img class="rickmorty" src="img/PngItem_262278.png" alt="">
+    
 
-    <div class="hed">
-
-      <input type="text" id="name" placeholder="Filter by name..." class="filter">
-    </div>
-    <a class="pickle" href=""><img src="img/pickle_resized.png" alt="">Home</a>
+    
+    <button class="vibrate-3" ><img src="./img/RICK_MORTY_ICON.png" alt=""></button>
+   
+        <div class="container text-center cardsContainer">
+            <div class="row   ">
+                <div class="col-12 ">
+                    <h1 class="scale-in-top">API de Rick and Morty</h1>
+                </div>
+                <div class="col-8 button1 ">
+                  <input type="text" id="name" placeholder="Filter by name..." class=" filter ">
+                </div>
+            </div>
+        </div>
+    
   </header>
-  
+
 
 
   <main>
-    <div class="user-list">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>
+    
+    
+      <div class="user-list justify-content-center row" >
+        
+      </section>
 
     </div>
-    <img class="pageN" src="img/poster,504x498,f8f8f8-pad,600x600,f8f8f8 (1).png">
-    <img class="pageP" src="img/poster,504x498,f8f8f8-pad,600x600,f8f8f8 (1).png" alt="" srcset="">
-  </main>
+   
+    </main>
+    <section>
+      <ul class="pagination buttonPages ">
+          <li class="pageP"><button class="glowing-btn page-link btn bg-success text-white"
+                  ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                  </svg> </button>
+          </li>
+          <li class="pageN"><button class=" glowing-btn page-link btn bg-success text-white">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </svg></button>
+          </li>
+      </ul>
+      <div>
+          <img src="./img/FUNDO_2.1.jpg" alt="" srcset="" class="kenburns-right">
+      </div>
+  </section>
   <footer>
-    <div class="remimg"> <img src="img/rick-and-morty-portal-shoes-white-clothing-zavvi-23 (1).png" alt="1213"></div>
-
-  </footer>
-  <p id="foots" style="color: white;">Developed by:<a href="https://www.linkedin.com/in/gilberto-juniorsantos/"
-      target="_blank">Gilberto P.S.Júnior</a></p>
+  
+    <div class="footerContainer">
+        <p class="ptext">Characteres: <span>826</span></p>
+        <p class="ptext">Locations: <span>126</span></p>
+        <p class="ptext">Episodes: <span>51</span></p>
+    </div>
+    <div class="divCreditos">
+      <p>Developed by:  <a href="https://www.linkedin.com/in/gilberto-juniorsantos/" target="_blank">Gilberto
+        P.S.Júnior</a> </p>
+        
+    </div>
+</footer>
+  <p id="foots">Developed by:</p>
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="src/app.js"></script>
   <script src="src/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
