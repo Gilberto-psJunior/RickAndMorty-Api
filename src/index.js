@@ -28,48 +28,52 @@ async function fetchRender(page, name = "") {
     
       userContainer.innerHTML += `
 
-      <div  class="col pb-5   d-flex justify-content-center ">
+      <a class="col-lg-4 col-md-6 col-sm-12   pb-5 d-flex justify-content-center  " data-bs-toggle="modal" data-bs-target="#Modal-${index}">
       
-       <a class="col" data-bs-toggle="modal" data-bs-target="#exampleModal-${index}" href="">
-         <div class="card " style="width: 18rem ; padding="">
-         <img src="${user.image}" class="card-img-top" alt="...">
+       
+         <div  class="card d-flex justify-content-center " style="width: 20rem ; padding="20px">
+         <img src="${user.image}"  class="card-img-top" alt="...">
          
          
          <div data-bs-toggle="modal" data-bs-target="#exampleModal" class="card-body">
-          <h5 class="fs-3 card-title text-center">${user.name}</h5>
+          <h5 class="fs-1  text-center">${user.name}</h5>
          
           <hr>
-          <h5 class="card-text text-center"> Species:${user.species}</h5>
-           <div id='status' class="text-center">
-              <div id="spanStatus" >Status: ${user.status} <div class='statusColor ${
-                user.status == "Dead"
-                  ? "dead"
-                  : user.status == "Alive"
-                  ? "alive"
-                  : "unknown"
-              }'>
-              </div></div>
+          <ul class="mods list-group list-group-flush">
+          <li class="mods "> <h5 class="card-text text-center"> Species: <em>${user.species}</em></h5></li>
+           <li class="mods ">
+             <div id='status' class="text-center">
+                <div id="spanStatus" >Status: <em> ${user.status} </em><div class='statusColor ${
+                  user.status == "Dead"
+                    ? "dead"
+                    : user.status == "Alive"
+                    ? "alive"
+                    : "unknown"
+                }'>
+                </div>
+           </li></div>
               
               
               </div>
          
          
               </div>
-          
+          </ul>
                </div>
              </div>
        </a>
     </div>
-    <div class="modal mods" id="exampleModal-${index}" tabindex="-1">
-  <div class="modal-dialog mods d-flex justify-content-center">
-    <div class="modal-content d-flex justify-content-center">
+    <div class="modal  " id="Modal-${index}" tabindex="-1">
+  <div class="modal-dialog   ">
+    <div class="modal-content under name  d-flex justify-content-center">
       
-        <h5  class=" fs-2 text-center" >${user.name}</h5>
-        <img src="${user.image}" class="card-img-top" alt="...">
+        <h5  class="shadow-sm bg-white mb-5  rounded rounded name fs-1 text-center" >${user.name}</h5>
+        <img src="${user.image}"  class="card-img-top" alt="...">
       
       <div class="modal-body">
-      <h5 id="spanStatus" class="card-text text-center fs-3 "> Species: ${user.species}</h5>
-      <div id='status' class="text-center ">
+      <ul class="mods list-group list-group-flush rounded-5 ">
+      <li class="list-group-item"><h5 id="spanStatus" class="card-text text-center fs-3 "> Species: ${user.species}</h5></li>
+      <li class="list-group-item"><div id='status' class="text-center ">
          <div id="spanStatus" >Status: ${user.status} <div class=' statusColor ${
            user.status == "Dead"
              ? "dead"
@@ -77,16 +81,25 @@ async function fetchRender(page, name = "") {
              ? "alive"
              : "unknown"
          }'>
-         </div></div>
-         <h5 id="spanStatus" class="card-text"> Last known location:</h5>
+         </div></div></li>
+         <li class="text-center list-group-item"><h5 id="spanStatus" class="card-text"> Last known location:</h5>
          <p>${user.location.name}</p>
-         <p id="spanStatus">Last seen in episode: </p><p>${lastEpisodeName}</p>
+         </li>
+         <li  class="text-center list-group-item"><p id="spanStatus">Last seen in episode: </p><p>${lastEpisodeName}</p>
+         <hr>
+         <button type="button" class="btn button btn-secondary" data-bs-dismiss="modal">Close</button>
          </div>
       </div>
+      </li>
+      
+      </ul>
       <div class="modal-footer d-flex justify-content-center ">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
         
       </div>
+      
+      
+      
     </div>
   </div>
 </div>
@@ -125,7 +138,7 @@ next.addEventListener("click", () => {
     userContainer.innerHTML = "";
     currentpage += 1;
     prev.style.display='block';
-   
+    document.getElementsByClassName("btnN").disabled = true;
     
     fetchRender(currentpage,searchCharacter.value);
   }
@@ -141,6 +154,11 @@ prev.addEventListener("click", () => {
     currentpage -= 1;
     
     fetchRender(currentpage,searchCharacter.value);
+  }
+  else
+  if(currentpage==1){
+    document.getElementById("btnP").disabled = true;
+    document.getElementById("btnP").style="background-color: rgb(0, 0, 0)!important;"
   }
 });
 

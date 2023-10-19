@@ -8,7 +8,9 @@ html {
     
 }
 body{
-    overflow-x: hidden;
+    
+   
+    width: 100vw;
 }
 
 
@@ -103,7 +105,7 @@ body {
 }
 
 .card {
-    border: 0.2rem solid #469145;
+    border: 0.1rem solid #469145;
     margin-top: 4rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -111,16 +113,47 @@ body {
     width: 300px;
     color: aliceblue;
     transition: transform .5s;
-    box-shadow: rgb(0, 0, 0) 10px 2px 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.795) 10px 2px 5px 0px;
     
     
+
+}
+.modal{
+  background-color: #000000b7;
+}
+.name{
+  text-shadow: white 5px 5px 5px 5px;
+}
+
+.button{
+  background-image: url(./img/texture.jpg)!important;
+font-weight: bolder!important;
+text-shadow: #000000 2px 2px 2px 2px !important;
+font-family: Arial, Helvetica, sans-serif;
+border:1px solid black !important;
+box-shadow: #000000 1px 1px 1px 1px !important;
+color: black !important;
+}
+.under{
+  background:url(img/629771374d3a362cbff3eb3eb21d7995.jpg);
+}
+.card-body {
+ 
+  box-shadow: rgba(0, 0, 0, 0) 10px 2px 5px 0px;
+  
+  background-color: #252525!important;
 }
 .mods{
   border: 0px 0px 0px 5px solid #469145;
-  background-color: #000000a2;
+  color: white !important;
+  background-color: #252525!important;
+  list-style: none;
   
  
   
+}
+.card-backdrop {
+  background: none;
 }
 .card:hover{
   
@@ -163,11 +196,7 @@ body {
 
 /* texto dos cards */
 
-.pTitulo {
-    margin-left: 0.2rem;
-    margin-top: 0.7rem;
-    /* font-size: 1rem; */
-}
+
 
 p {
     margin: 0;
@@ -179,12 +208,12 @@ p {
     justify-content: center;
     align-items: center;
    
-    /* margin-top: 1rem; */
-    padding: 0.1rem;
+   
+    padding: 1rem;
 }
 
 .buttonPages li {
-    margin: 0.5rem;
+    margin: 1rem;
 }
 
 .statusColor {
