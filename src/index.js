@@ -63,15 +63,16 @@ async function fetchRender(page, name = "") {
              </div>
        </a>
     </div>
-    <div class="modal  " id="Modal-${index}" tabindex="-1">
+    <div class="modal rounded-5 border border-5 border-secondary " id="Modal-${index}" tabindex="-1">
   <div class="modal-dialog   ">
-    <div class="modal-content under name  d-flex justify-content-center">
+    <div class="modal-content under animation-pulse border  d-flex justify-content-center">
       
-        <h5  class="shadow-sm bg-white  rounded rounded name fs-1 text-center" >${user.name}</h5>
-        <img src="${user.image}"  class="card-img-top" alt="...">
+        <h5  class="shadow-sm mb-0  bg-white  rounded rounded name fs-1 text-center" >${user.name}</h5>
+        
+        <div class="modal-header under  mb-0  d-flex justify-content-center"><img src="${user.image}"  class="modal-img rounded-5 d-flex justify-content-center  border-success " alt="..."> </div>
+     
       
-      <div class="modal-body">
-      <ul class="h-75 mods list-group list-group-flush rounded-5 ">
+      <ul class="h-75 mods under list-group list-group-flush rounded-5 ">
       <li class="list-group-item"><h5 id="spanStatus" class="card-text text-center fs-3 "> Species: ${user.species}</h5></li>
       <li class="list-group-item"><div id='status' class="text-center ">
          <div id="spanStatus" >Status: ${user.status} <div class=' statusColor ${
@@ -87,9 +88,9 @@ async function fetchRender(page, name = "") {
          </li>
          <li  class="text-center list-group-item"><p id="spanStatus">Last seen in episode: </p><p>${lastEpisodeName}</p>
          <hr>
-         <button type="button" class="btn button btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="button" class="btn button btn-secondary " data-bs-dismiss="modal">Close</button>
          </div>
-      </div>
+      
       </li>
       
       </ul>

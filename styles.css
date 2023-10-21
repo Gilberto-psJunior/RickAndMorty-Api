@@ -314,7 +314,14 @@ body {
     
 
 }
+.greyy{
+  background-color: rgb(204, 204, 204);
+}
+.modal-img{
+  height: 50%!important;
+  width: 97%!important;
 
+}
 .modal{
   background-color: #000000b7;
   height: 100vh;
@@ -334,7 +341,11 @@ color: black !important;
 animation: rotation 1s infinite;
 }
 .under{
-  background:url(img/629771374d3a362cbff3eb3eb21d7995.jpg);
+  background:url(img/texture.jpg);
+  
+}
+.animation-pulse{
+  animation: pulse 1s infinite;
 }
 .card-body {
  
