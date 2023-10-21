@@ -46,6 +46,12 @@ body {
     0px 0px 0.5em 0px var(--glow-color);
   animation: border-flicker 2s 0.5s linear infinite;
 }
+.input-icon {
+  background-image: url('./search\ \(1\).svg');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+  padding-right: 30px; /* espaço para o ícone */
+}
 
 .glowing-txt {
   float: left;
