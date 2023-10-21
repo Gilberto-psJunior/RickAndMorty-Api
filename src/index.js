@@ -65,7 +65,7 @@ async function fetchRender(page, name = "") {
     </div>
     <div class="modal rounded-5 border border-5 border-secondary " id="Modal-${index}" tabindex="-1">
   <div class="modal-dialog   ">
-    <div class="modal-content under animation-pulse border  d-flex justify-content-center">
+    <div class="modal-content under  border  d-flex justify-content-center">
       
         <h5  class="shadow-sm mb-0  bg-white  rounded rounded name fs-1 text-center" >${user.name}</h5>
         
@@ -88,7 +88,7 @@ async function fetchRender(page, name = "") {
          </li>
          <li  class="text-center list-group-item"><p id="spanStatus">Last seen in episode: </p><p>${lastEpisodeName}</p>
          <hr>
-         <button type="button" class="btn button btn-secondary " data-bs-dismiss="modal">Close</button>
+         <button class="button btn btn-danger" role="button">Close</button>
          </div>
       
       </li>
