@@ -35,7 +35,7 @@ body {
     0px 0px 0.5em 0px var(--glow-color);
   box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
-  animation: border-flicker 2s linear infinite;
+  animation: border-flicker 2s linear infinite ease;
 }
 .glowing-btn2 {
   -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
@@ -313,7 +313,7 @@ body {
   border: 1px solid black !important;
   box-shadow: #000000 1px 1px 1px 1px !important;
   color: black !important;
-  animation: rotation 1s infinite;
+  animation: rotation 1s infinite ease-in;
   color: white!important;
   text-shadow: #000000 2px 5px 2px 2px!important;
 }
@@ -411,31 +411,6 @@ p {
   touch-action: manipulation;
 }
 
-.button-85:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
 
 @keyframes glowing-button-85 {
   0% {
@@ -449,17 +424,7 @@ p {
   }
 }
 
-.button-85:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
+
 
 .filter {
   width: 40vw;

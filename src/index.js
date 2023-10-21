@@ -97,7 +97,7 @@ async function fetchRender(page, name = "") {
          </li>
          <li  class="text-center list-group-item"><p id="spanStatus">Last seen in episode: </p><p>${lastEpisodeName}</p>
          <hr>
-         <button class="button btn btn-danger" role="button">Close</button>
+         <button class="button btn btn-danger" data-bs-dismiss="modal" role="button">Close</button>
          </div>
       
       </li>
