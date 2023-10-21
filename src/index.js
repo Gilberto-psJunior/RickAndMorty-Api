@@ -31,7 +31,7 @@ async function fetchRender(page, name = "") {
       <a class="col-lg-4 col-md-6 col-sm-12   pb-5 d-flex justify-content-center  " data-bs-toggle="modal" data-bs-target="#Modal-${index}">
       
        
-         <div  class="card d-flex justify-content-center " style="width: 20rem ; padding="20px">
+         <div  class="card  " style="width: 20rem ; padding="20px">
          <img src="${user.image}"  class="card-img-top" alt="...">
          
          
@@ -67,11 +67,11 @@ async function fetchRender(page, name = "") {
   <div class="modal-dialog   ">
     <div class="modal-content under name  d-flex justify-content-center">
       
-        <h5  class="shadow-sm bg-white mb-5  rounded rounded name fs-1 text-center" >${user.name}</h5>
+        <h5  class="shadow-sm bg-white  rounded rounded name fs-1 text-center" >${user.name}</h5>
         <img src="${user.image}"  class="card-img-top" alt="...">
       
       <div class="modal-body">
-      <ul class="mods list-group list-group-flush rounded-5 ">
+      <ul class="h-75 mods list-group list-group-flush rounded-5 ">
       <li class="list-group-item"><h5 id="spanStatus" class="card-text text-center fs-3 "> Species: ${user.species}</h5></li>
       <li class="list-group-item"><div id='status' class="text-center ">
          <div id="spanStatus" >Status: ${user.status} <div class=' statusColor ${
@@ -93,10 +93,7 @@ async function fetchRender(page, name = "") {
       </li>
       
       </ul>
-      <div class="modal-footer d-flex justify-content-center ">
-        
-        
-      </div>
+      
       
       
       
@@ -168,5 +165,6 @@ function hide() {
     next.style.display = "block";
   }
 }
+
 
 fetchRender();
