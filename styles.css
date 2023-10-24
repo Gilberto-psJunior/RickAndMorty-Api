@@ -50,7 +50,16 @@ body {
   background-image: url('./search\ \(1\).svg');
   background-repeat: no-repeat;
   background-position: calc(100% - 10px) center;
-  padding-right: 30px; /* espaço para o ícone */
+  
+}
+@media (max-width: 768px) {
+  .input-icon {
+    background-image: url('./search\ \(1\).svg');
+    background-repeat: no-repeat;
+    background-position: calc(85% - 10px) center;
+    
+  }
+  
 }
 
 .glowing-txt {
@@ -312,7 +321,7 @@ body {
   text-shadow: white 5px 5px 5px 5px;
 }
 
-.button {
+.buttonn {
   font-weight: bolder !important;
   
   font-family: Arial, Helvetica, sans-serif !important;
