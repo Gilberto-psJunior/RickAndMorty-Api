@@ -234,6 +234,18 @@ body {
   -webkit-animation: vibrate-3 1s linear 30;
   animation: vibrate-3 1s linear 30;
 }
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 
 /* estilização do header */
 header {
