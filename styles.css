@@ -49,14 +49,14 @@ body {
 .input-icon {
   background-image: url('./search\ \(1\).svg');
   background-repeat: no-repeat;
-  background-position: calc(100% - 10px) center;
+  background-position: calc(100% - 1px) center;
   
 }
 @media (max-width: 768px) {
   .input-icon {
     background-image: url('./search\ \(1\).svg');
     background-repeat: no-repeat;
-    background-position: calc(85% - 10px) center;
+    background-position: calc(100% - 1px) center;
     
   }
   
