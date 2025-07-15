@@ -29,7 +29,7 @@ Explore personagens com imagens, nomes e informações diretamente da série mai
 
 > 🔍 Tela com busca de personagens
 
-![Preview Rick and Morty](./img/rickandmorty-preview.jpg)
+![Preview Rick and Morty](./img/rickandmorty-preview.png)
 
 ---
 
